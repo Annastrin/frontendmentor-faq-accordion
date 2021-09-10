@@ -1,0 +1,55 @@
+.card {
+  position: relative;
+  max-width: 500px;
+  margin: 12.3rem auto 85px;
+  padding: 11.3rem 2rem 4rem;
+  border-radius: 2rem;
+  background-color: $cardBackground;
+
+  @media #{$large} {
+    max-width: 922px;
+    margin: 130px 0 85px auto;
+    padding: 67px 8rem 7rem;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -9rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 260px;
+    height: 220px;
+    background-image: url("./../images/illustration-woman-online-mobile.svg"),
+      url("./../images/bg-pattern-mobile.svg");
+    background-position: center 0, center 9rem;
+    background-repeat: no-repeat;
+
+    @media #{$large} {
+      top: 0;
+      left: 0;
+      width: 32.5rem;
+      height: 100%;
+      transform: translateX(0%);
+      background-image: url("./../images/illustration-woman-online-desktop.svg"),
+        url("./../images/bg-pattern-desktop.svg");
+      background-position: right 69px, right -295px;
+    }
+  }
+
+  &::after {
+    @media #{$large} {
+      content: "";
+      display: block;
+      width: 16rem;
+      height: 15.4rem;
+      position: absolute;
+      top: 204px;
+      left: -93px;
+      background-image: url("./../images/illustration-box-desktop.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}

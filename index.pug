@@ -1,0 +1,45 @@
+-
+  var faq = [
+    {
+      title: "How many team members can I invite?",
+      body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet ipsum maximus, rhoncus lorem a, consequat neque. Nullam maximus purus nec lacus dapibus, a pretium libero euismod. Fusce condimentum.",
+      open: false
+    },
+    {
+      title: "What is the maximum file upload size?",
+      body: "No more than 2GB. All files in your account must fit your allotted storage space.",
+      open: true
+    },
+    {
+      title: "How do I reset my password?",
+      body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam convallis vitae magna nec eleifend. Maecenas sodales ultricies lectus non aliquam. Vivamus id vehicula magna. Aenean ornare tempus eros, quis eleifend.",
+      open: false
+    },
+    {
+      title: "Can I cancel my subscription?",
+      body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non sagittis nulla, in dictum diam. In fringilla leo quis nibh accumsan vulputate. Suspendisse facilisis, elit sit amet luctus ornare, lorem.",
+      open: false
+    },
+    {
+      title: "Do you provide additional support?",
+      body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at ligula non magna facilisis tincidunt et quis ipsum. Aenean ultrices dignissim nisl, eget molestie erat ultrices sit amet. In a.",
+      open: false
+    }
+  ];
+
+doctype html
+html(lang="en")
+  head
+    title FAQ
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="shortcut icon", href="./favicon.ico", type="image/x-icon")
+  body
+    .container
+      .card
+        .accordion
+          h1 FAQ
+          each entry, index in faq
+            details.accordion__item(open=entry.open ? "" : null)
+              summary.accordion__title= entry.title
+              .accordion__content= entry.body

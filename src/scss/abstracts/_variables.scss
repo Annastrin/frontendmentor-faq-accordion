@@ -1,0 +1,22 @@
+// PALETTE COLORS
+$veryDarkDesaturatedBlue: hsl(238, 29%, 16%);
+$softRed: hsl(14, 88%, 65%);
+$veryDarkGrayishBlue: hsl(237, 12%, 33%);
+$darkGrayishBlue: hsl(240, 6%, 50%);
+$lightGrayishBlue: hsl(240, 5%, 91%);
+$softViolet: hsl(273, 75%, 66%);
+$softBlue: hsl(240, 73%, 65%);
+$white: hsl(100, 100%, 100%);
+
+// COLORS
+$backgroundGradient: linear-gradient($softViolet, $softBlue);
+$cardBackground: $white;
+$headerColor: $veryDarkDesaturatedBlue;
+$activeTitleColor: $veryDarkDesaturatedBlue;
+$hoverTitleColor: $softRed;
+$primaryTextColor: $veryDarkGrayishBlue;
+$accordionBodyTextColor: $darkGrayishBlue;
+$dividersColor: $lightGrayishBlue;
+
+// BREAKPOINTS
+$large: "screen and (min-width: 1012px)";
