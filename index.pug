@@ -33,13 +33,12 @@ html(lang="en")
     title FAQ
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1")
-    link(rel="shortcut icon", href="./favicon.ico", type="image/x-icon")
   body
     .container
       .card
         .accordion
           h1 FAQ
-          each entry, index in faq
+          each entry in faq
             details.accordion__item(open=entry.open ? "" : null)
               summary.accordion__title= entry.title
               .accordion__content= entry.body
